@@ -31,7 +31,7 @@ with open("data.csv") as file:
     next(file)
     male_stats, female_stats = process_data(file.readlines())
 
-def do_var10(male_stats, female_stats):
+def do_var10():
     st.title('Вариант 10')
     st.header('Данные пассажиров Титаника')
     st.write("Для просмотра данных о стоимости билетов, выберите пункт из списка ")
@@ -76,4 +76,4 @@ def do_var10(male_stats, female_stats):
         plt.title("Минимальная стоимость билетов")
         st.pyplot(fig)
 
-do_var10(male_stats, female_stats)
+do_var10()
