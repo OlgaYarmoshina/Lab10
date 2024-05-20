@@ -4,7 +4,7 @@ st.image('titanic.jpg')
 choice = st.selectbox('Вариант номер:',  ['вариант 10','вариант 12','вариант 13'])
 
 if choice == 'Вариант 10':
-    do_var10()
+    do_var10(male_stats, female_stats)
 elif choice == 'Вариант 12':
     pass
 

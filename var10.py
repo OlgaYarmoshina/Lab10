@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import streamlit as st
-def do_var10():
 def process_data(lines):
     male_fares = []
     female_fares = []
