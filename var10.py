@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import streamlit as st
-def do_var10():
- def process_data(lines):
+
+def process_data(lines):
     male_fares = []
     female_fares = []
 
@@ -28,12 +28,11 @@ def do_var10():
 
     return male_stats, female_stats
 
- with open("data.csv") as file:
+with open("data.csv") as file:
     next(file)
     male_stats, female_stats = process_data(file.readlines())
-
-#def do_var10():
-    st.image('titanic.jpg')
+def do_var10():
+    st.title ('Вариант 10')
     st.header('Данные пассажиров Титаника')
     st.write("Для просмотра данных о стоимости билетов , выберите пункт из списка ")
     selected = st.selectbox('Выберите тип стоимости', ['Средняя цена', 'Максимальная цена', 'Минимальная цена'])
