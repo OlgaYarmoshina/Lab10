@@ -1,14 +1,10 @@
-import matplotlib.pyplot as plt
 import streamlit as st
-
+from var10 import  do_var10
 st.image('titanic.jpg')
-st.header('Данные пассажиров Титаника')
-st.write("Для просмотра данных о стоимости билетов , выберите пункт из списка ")
-selected = st.selectbox('Выберите тип стоимости', ['Средняя цена', 'Максимальная цена', 'Минимальная цена'])
+choice = st.selectbox('Вариант номер:',  ['вариант 10','вариант 12','вариант 13'])
 
-fig = plt.figure(figsize=(10, 5))
-plt.bar = 1
-plt.xlabel("Пол")
-plt.ylabel("Цена")
-plt.title("Минимальная стоимость билетов")
-st.pyplot(fig)
+if choice == 'Вариант 10':
+    do_var10()
+elif choice == 'Вариант 12':
+    pass
+
