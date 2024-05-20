@@ -75,3 +75,4 @@ def do_var10():
        plt.ylabel("Цена")
        plt.title("Минимальная стоимость билетов")
        st.pyplot(fig)
+do_var10()
