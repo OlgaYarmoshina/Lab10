@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import streamlit as st
-
+def do_var10():
 def process_data(lines):
     male_fares = []
     female_fares = []
@@ -31,48 +31,50 @@ def process_data(lines):
 with open("data.csv") as file:
     next(file)
     male_stats, female_stats = process_data(file.readlines())
-def do_var10():
-    st.title ('Вариант 10')
+
+def do_var10(male_stats, female_stats):
+    st.title('Вариант 10')
     st.header('Данные пассажиров Титаника')
-    st.write("Для просмотра данных о стоимости билетов , выберите пункт из списка ")
+    st.write("Для просмотра данных о стоимости билетов, выберите пункт из списка ")
     selected = st.selectbox('Выберите тип стоимости', ['Средняя цена', 'Максимальная цена', 'Минимальная цена'])
 
     if selected == 'Средняя цена':
-       averageFare = [male_stats['avg_fare'], female_stats['avg_fare']]
-       sex = ['Мужчины', 'Женщины']
-       data = {'Пол': sex, 'Цена': averageFare}
-       st.table(data)
+        averageFare = [male_stats['avg_fare'], female_stats['avg_fare']]
+        sex = ['Мужчины', 'Женщины']
+        data = {'Пол': sex, 'Цена': averageFare}
+        st.table(data)
 
-       fig = plt.figure(figsize=(10, 5))
-       plt.bar(sex, averageFare)
-       plt.xlabel("Пол")
-       plt.ylabel("Цена")
-       plt.title("Средняя стоимость билетов")
-       st.pyplot(fig)
+        fig = plt.figure(figsize=(10, 5))
+        plt.bar(sex, averageFare)
+        plt.xlabel("Пол")
+        plt.ylabel("Цена")
+        plt.title("Средняя стоимость билетов")
+        st.pyplot(fig)
 
     elif selected == 'Максимальная цена':
-       maxFare = [male_stats['max_fare'], female_stats['max_fare']]
-       sex = ['Мужчины', 'Женщины']
-       data = {'Пол': sex, 'Цена': maxFare}
-       st.table(data)
+        maxFare = [male_stats['max_fare'], female_stats['max_fare']]
+        sex = ['Мужчины', 'Женщины']
+        data = {'Пол': sex, 'Цена': maxFare}
+        st.table(data)
 
-       fig = plt.figure(figsize=(10, 5))
-       plt.bar(sex, maxFare)
-       plt.xlabel("Пол")
-       plt.ylabel("Цена")
-       plt.title("Максимальная стоимость билетов")
-       st.pyplot(fig)
+        fig = plt.figure(figsize=(10, 5))
+        plt.bar(sex, maxFare)
+        plt.xlabel("Пол")
+        plt.ylabel("Цена")
+        plt.title("Максимальная стоимость билетов")
+        st.pyplot(fig)
 
     elif selected == 'Минимальная цена':
-       minFare = [male_stats['min_fare'], female_stats['min_fare']]
-       sex = ['Мужчины', 'Женщины']
-       data = {'Пол': sex, 'Цена': minFare}
-       st.table(data)
+        minFare = [male_stats['min_fare'], female_stats['min_fare']]
+        sex = ['Мужчины', 'Женщины']
+        data = {'Пол': sex, 'Цена': minFare}
+        st.table(data)
 
-       fig = plt.figure(figsize=(10, 5))
-       plt.bar(sex, minFare)
-       plt.xlabel("Пол")
-       plt.ylabel("Цена")
-       plt.title("Минимальная стоимость билетов")
-       st.pyplot(fig)
-do_var10()
+        fig = plt.figure(figsize=(10, 5))
+        plt.bar(sex, minFare)
+        plt.xlabel("Пол")
+        plt.ylabel("Цена")
+        plt.title("Минимальная стоимость билетов")
+        st.pyplot(fig)
+
+do_var10(male_stats, female_stats)
