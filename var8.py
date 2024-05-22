@@ -2,8 +2,8 @@
 import matplotlib.pyplot as plt
 import streamlit as st
 
-def do_var10():
-    st.title('Вариант 10')
+def do_var8():
+    st.title('Вариант 8')
 
 st.header('Данные пассажиров Титаника')
 st.write("Для просмотра данных по количеству пассажиров каждого пола по указанному классу обслуживания, выбирите соответсвующий пункт из списка")
