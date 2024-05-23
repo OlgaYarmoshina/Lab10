@@ -4,7 +4,7 @@ st.header('Практическое занятие №11')
 st.image('titanic.jpg')
 st.header('Работа группы 2023-ФГиИБ-ПИ-2см: Подгруппа №2 ')
 
-choice = st.selectbox('Вариант номер:',  ['вариант 10','вариант 5','вариант 8','вариант 1', 'вариант 15', 'вариант 18'])
+choice = st.selectbox('Вариант номер:',  ['вариант 10','вариант 8'])
 
 #from var10 import do_var1
 #from var10 import do_var5
